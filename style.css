@@ -1,0 +1,308 @@
+/* ==========================================================================
+   External CSS Stylesheet: style.css
+   Designed for: Serene Horizons Web Page
+   Features: Fullscreen Background Image, Curated Text Colors, Styled Text Borders
+   ========================================================================== */
+
+/* 1. Global Reset & Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Body Styling with Background Image */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* Background image with high-contrast gradient overlay and fallback */
+    background: 
+        linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat fixed;
+    background-color: #0f172a; /* Fallback dark navy if offline */
+}
+
+/* 3. Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Bottom border */
+}
+
+/* Logo with bordered text frame and distinct text color */
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #38bdf8; /* Vibrant Sky Blue text color */
+    border: 2px solid #38bdf8; /* Text border */
+    padding: 6px 16px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #cbd5e1; /* Soft cool grey text color */
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    color: #fde047; /* Warm golden text color on hover */
+    border-bottom: 2px solid #fde047; /* Hover border */
+}
+
+/* 4. Main Hero Section */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Badge with decorative border and bright cyan text */
+.text-badge {
+    margin-bottom: 24px;
+}
+
+.badge-tag {
+    display: inline-block;
+    padding: 6px 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #38bdf8; /* Cyan text */
+    border: 1.5px solid #38bdf8; /* Border for text */
+    border-radius: 50px;
+    background: rgba(56, 189, 248, 0.1);
+}
+
+/* Hero Title with stylized text color and double bottom border */
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #ffffff; /* Crisp White text color */
+    line-height: 1.2;
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    display: inline-block;
+    border-bottom: 3px double #f59e0b; /* Amber double border for text */
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Subtitle Box with translucent background and rounded border */
+.subtitle-box {
+    max-width: 720px;
+    margin-bottom: 30px;
+    padding: 16px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Border around subtitle text */
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #cbd5e1; /* Light Slate text color */
+}
+
+/* Quote Callout with thick left accent border and dashed top/bottom borders */
+.quote-container {
+    max-width: 680px;
+    margin: 15px 0 35px 0;
+    padding: 20px 28px;
+    border-left: 5px solid #f59e0b; /* Thick Amber accent border */
+    border-top: 1px dashed rgba(255, 255, 255, 0.18); /* Dashed text border */
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.18); /* Dashed text border */
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0 12px 12px 0;
+    background: rgba(15, 23, 42, 0.5);
+    text-align: left;
+}
+
+.text-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fef08a; /* Golden cream text color */
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #34d399; /* Emerald Green text color */
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+/* Buttons with distinct borders and colors */
+.button-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #f59e0b;
+    color: #0f172a; /* Dark text for contrast */
+    border: 2px solid #f59e0b; /* Amber border */
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: #f59e0b; /* Amber text on hover */
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff; /* White text */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+}
+
+.btn-secondary:hover {
+    border-color: #38bdf8;
+    color: #38bdf8; /* Cyan text on hover */
+    background: rgba(56, 189, 248, 0.1);
+}
+
+/* 5. Destination Cards Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+.info-card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Card border */
+    border-radius: 14px;
+    padding: 30px 24px;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8; /* Border turns cyan on hover */
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
+}
+
+.info-card.highlight {
+    border: 1.5px solid #f59e0b; /* Highlighted card amber border */
+    background: rgba(30, 41, 59, 0.85);
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #38bdf8; /* Cyan text */
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #f8fafc; /* Crisp Light text */
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Subtle divider border under heading */
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #94a3b8; /* Muted Slate text */
+    margin-bottom: 20px;
+}
+
+/* Border around specific text stat / badge */
+.card-stat-border {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #34d399; /* Mint Green text */
+    border: 1px dashed #34d399; /* Dashed border for text */
+    border-radius: 6px;
+    background: rgba(52, 211, 153, 0.08);
+}
+
+/* 6. Footer */
+.footer {
+    text-align: center;
+    padding: 24px 20px;
+    background: rgba(15, 23, 42, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.12); /* Top border */
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    color: #64748b; /* Cool grey text */
+}
+
+/* 7. Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .main-content {
+        padding: 40px 16px 60px 16px;
+    }
+    .quote-container {
+        padding: 16px;
+    }
+}
